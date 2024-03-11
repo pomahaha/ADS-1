@@ -55,7 +55,7 @@ uint64_t nextPrime(uint64_t value) {
 }
 uint64_t sumPrime(uint64_t hbound) {
     int sum=0;
-    int chislo=0;
+    int chislo=2;
     while(chislo<hbound){
         int schet=0;
         for(int i=1;i<=chislo;i++){
@@ -68,5 +68,5 @@ uint64_t sumPrime(uint64_t hbound) {
         }
         chislo=chislo+1;
     }
-    return sum-1;
+    return sum;
 }
