@@ -8,8 +8,8 @@ bool checkPrime(uint64_t value) {
         if (value%i==0){
             return false;
         }
-        return true;
     }
+    return true;
 }
 uint64_t nPrime(uint64_t n) {
   int nomer=0;
@@ -42,16 +42,16 @@ uint64_t nextPrime(uint64_t value) {
             }
         }
         if(schet<3){
-            return chislo;
             f=false;
         }
         else{
             chislo=chislo+1;
             schet=0;
         }
+        return chislo;
     }
+    return chislo;
 }
-
 uint64_t sumPrime(uint64_t hbound) {
     int sum=0;
     int chislo=2;
