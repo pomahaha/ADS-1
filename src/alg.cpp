@@ -34,23 +34,24 @@ return save;
 uint64_t nextPrime(uint64_t value) {
     int chislo=value+1;
     int schet=0;
+    int save;
     bool f=true;
-    while(f=true){
+    while(f==true){
         for(int i=1;i<=chislo;i++){
             if(chislo%i==0){
                 schet=schet+1;
             }
         }
-        if(schet<3){
-            f=false;
+        if (schet>2){
+            schet=0;
+            chislo=chislo+1;
         }
         else{
-            chislo=chislo+1;
-            schet=0;
+            f=false;
+            save=chislo;
         }
-        return chislo;
     }
-    return chislo;
+    return save;
 }
 uint64_t sumPrime(uint64_t hbound) {
     int sum=0;
