@@ -15,14 +15,14 @@ uint64_t nPrime(uint64_t n) {
   int nomer = 0;
   int chislo = 2;
   int save;
-    while(nomer < n) {
+    while (nomer < n) {
     int schetprost = 0;
-      for(int i=1; i <= chislo;  i++) {
-        if(chislo%i == 0) {
+      for (int i=1; i <= chislo;  i++) {
+        if (chislo%i == 0) {
           schetprost = schetprost+1;
         }
       }
-    if(schetprost < 3) {
+    if (schetprost < 3) {
         save = chislo;
         nomer = nomer+1;
     }
@@ -36,9 +36,9 @@ uint64_t nextPrime(uint64_t value) {
     int schet = 0;
     int save;
     bool f = true;
-    while(f == true) {
-        for(int i=1; i <= chislo; i++) {
-            if(chislo%i == 0) {
+    while (f == true) {
+        for (int i=1; i <= chislo; i++) {
+            if (chislo%i == 0) {
                 schet = schet+1;
             }
         }
@@ -46,7 +46,7 @@ uint64_t nextPrime(uint64_t value) {
             schet = 0;
             chislo = chislo+1;
         }
-        else{
+        else {
             f = false;
             save = chislo;
         }
