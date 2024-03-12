@@ -47,10 +47,10 @@ uint64_t nextPrime(uint64_t value) {
             chislo = chislo+1;
         }
         else {
-            f = false;
-            save = chislo;
-        }
-    }
+          f = false;
+          save = chislo;
+          }
+      }
     return save;
 }
 uint64_t sumPrime(uint64_t hbound) {
