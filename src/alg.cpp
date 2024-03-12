@@ -2,7 +2,6 @@
 #include <cstdint>
 #include "alg.h"
 
-
 bool checkPrime(uint64_t value) {
   for (int i=2;i<value;i++){
         if (value%i==0){
@@ -54,19 +53,11 @@ uint64_t nextPrime(uint64_t value) {
     return save;
 }
 uint64_t sumPrime(uint64_t hbound) {
-    uint64_t sum=0;
-    uint64_t chislo=2;
-    while(chislo<hbound){
-        uint64_t schet=0;
-        for(uint64_t i=1;i<=chislo;i++){
-            if(chislo%i==0){
-                schet=schet+1;
-            }
-        }
-        if (schet<3){
-            sum=sum+chislo;
-        }
-        chislo=chislo+1;
-    }
-    return sum;
+  uint64_t sm = 0;
+  for (uint64_t i = 2; i < hbound; i++) {
+      if (checkPrime(i) == 1) {
+          sm = sm + i;
+      }
+  }
+  return sm;
 }
